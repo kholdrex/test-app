@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Hacker News Scraper
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    = csrf_meta_tags
+  body
+    nav
+      .nav-wrapper.red.accent-3
+        = link_to root_path, class: 'brand-logo' do
+          i.material-icons language
+          | Hacker News Scraper
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+            = link_to 'Hacker News', 'https://news.ycombinator.com', target: '_blank'
+    = yield

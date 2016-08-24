@@ -1,0 +1,12 @@
+.card
+  .card-content
+    span.card-title.activator.grey-text.text-darken-4
+      = article.title
+      i.material-icons.right more_vert
+    p
+      = link_to 'Link', article.url, target: '_blank'
+  .card-reveal
+    span.card-title.grey-text.text-darken-4
+      = article.author
+      i.material-icons.right close
+    p = article.title
